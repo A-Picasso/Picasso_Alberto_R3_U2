@@ -1,0 +1,9 @@
+.game-card-container {
+    margin-block-start: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px;
+    margin-inline: 70px;
+    box-sizing: border-box;
+  }

@@ -1,0 +1,54 @@
+<header>
+  <app-menu></app-menu>
+</header>
+<form [formGroup]="addGameForm" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="title">Título</label>
+      <input id="title" formControlName="title" type="text">
+      <div *ngIf="addGameForm.get('title')?.invalid && addGameForm.get('title')?.touched">
+        <small>Título inválido</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="rating">Clasificación</label>
+      <input id="rating" formControlName="rating" type="number">
+      <div *ngIf="addGameForm.get('rating')?.invalid && addGameForm.get('rating')?.touched">
+        <small>Clasificación inválida</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row full-width">
+    <label for="description">Descripción</label>
+    <input id="description" formControlName="description" type="text">
+    <div *ngIf="addGameForm.get('description')?.invalid && addGameForm.get('description')?.touched">
+      <small>Descripción inválida</small>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="releaseDate">Fecha de lanzamiento</label>
+      <input id="releaseDate" formControlName="releaseDate" type="date">
+      <div *ngIf="addGameForm.get('releaseDate')?.invalid && addGameForm.get('releaseDate')?.touched">
+        <small>Fecha inválida</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="downloads">Número de descargas</label>
+      <input id="downloads" formControlName="downloads" type="number">
+      <div *ngIf="addGameForm.get('downloads')?.invalid && addGameForm.get('downloads')?.touched">
+        <small>Número de descargas inválido</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row last-row">
+    <div class="checkbox-group">
+      <label for="comingSoon">Próximamente</label>
+      <input id="comingSoon" formControlName="comingSoon" type="checkbox">
+    </div>
+    <button type="submit">Agregar</button>
+  </div>
+</form>

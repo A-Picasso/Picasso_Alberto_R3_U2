@@ -1,0 +1,18 @@
+<div class="game-card">
+  <div class="game-details">
+    <h2>{{ game.title }}</h2>
+  </div>
+  <img [src]="game.image" alt="{{ game.title }} image" class="game-image">
+  <div class="game-details">
+    <div class="info-line">
+      <p class="release-date"><span style="color: #3f51b5;">Fecha de lanzamiento:</span> {{ game.releaseDate }}</p>
+      <div class="rating">
+        <span *ngFor="let star of getStars()">★</span>
+      </div>
+    </div>
+    <p>{{ game.description }}</p>
+    <p><span style="color: #3f51b5;">Descargas:</span> {{ game.downloads }}</p>
+    <p *ngIf="game.comingSoon">Coming Soon</p>
+    <button class="add-to-cart">Agregar al carrito</button>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+/* Estilo para el contenedor de navegación */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #3f51b5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Estilo para los enlaces de navegación */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+/* Estilo para el hover de los enlaces de navegación */
+nav a:hover {
+  background-color: #303f9f; 
+  cursor: pointer;
+}
+
+.main-content {
+  padding-top: 80px;
+}
+img{
+  max-height: 50px;
+}
